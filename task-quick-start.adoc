@@ -1,0 +1,25 @@
+---
+sidebar: sidebar 
+permalink: task-quick-start.html 
+keywords: set up azure netapp files, quick start 
+summary: Beginnen Sie mit Azure NetApp Files , indem Sie eine Microsoft Entra-Anwendung einrichten und ein System erstellen. 
+---
+= Workflow „Erste Schritte“
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Beginnen Sie mit Azure NetApp Files , indem Sie eine Microsoft Entra-Anwendung einrichten und ein System erstellen.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Eins"] link:task-set-up-azure-ad.html["Einrichten einer Microsoft Entra-Anwendung"]
+[role="quick-margin-para"]
+Erteilen Sie von Azure aus Berechtigungen für eine Microsoft Entra-Anwendung und kopieren Sie die Anwendungs-ID (Client), die Verzeichnis-ID (Mandant) und den Wert eines Client-Geheimnisses.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Zwei"] link:task-create-system.html["Erstellen eines Azure NetApp Files Systems"]
+[role="quick-margin-para"]
+Wählen Sie auf der Seite „Systeme“ in der NetApp Konsole „System hinzufügen“ > „Microsoft Azure“ > „Azure NetApp Files“ aus und geben Sie dann Details zur Active Directory-Anwendung ein.

@@ -1,0 +1,81 @@
+---
+sidebar: sidebar 
+permalink: concept-azure-netapp-files.html 
+keywords: azure netapp files, cost, price, features, azure netapp files features, anf, supported regions, azure regions, azure netapp files regions 
+summary: Azure NetApp Files ermöglicht es Unternehmen, ihre leistungsintensiven und latenzempfindlichen geschäftskritischen Kernanwendungen in Azure zu migrieren und dort auszuführen, ohne dass eine Umgestaltung für die Cloud erforderlich ist. 
+---
+= Informationen zu Azure NetApp Files
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Azure NetApp Files ermöglicht es Unternehmen, ihre leistungsintensiven und latenzempfindlichen geschäftskritischen Kernanwendungen in Azure zu migrieren und dort auszuführen, ohne dass eine Umgestaltung für die Cloud erforderlich ist.
+
+
+
+== Features
+
+* Die Unterstützung mehrerer Protokolle ermöglicht die nahtlose Ausführung von Linux- und Windows-Anwendungen per „Lift & Shift“ in Azure.
+* Mehrere Leistungsstufen ermöglichen eine genaue Abstimmung auf die Leistungsanforderungen der Arbeitslast.
+* Führende Zertifizierungen, darunter SAP HANA, DSGVO und HIPAA, ermöglichen die Migration der anspruchsvollsten Workloads zu Azure.
+
+
+
+
+=== Zusätzliche Funktionen in der NetApp Konsole
+
+* Migrieren Sie NFS- oder SMB-Daten direkt von der NetApp -Konsole zu Azure NetApp Files .  Datenmigrationen werden durch NetApp Copy and Sync unterstützt.
++
+https://docs.netapp.com/us-en/bluexp-copy-sync/concept-cloud-sync.html["Erfahren Sie mehr über Kopieren und Synchronisieren"^]
+
+* Mithilfe künstlicher Intelligenz (KI) kann Ihnen die NetApp Datenklassifizierung dabei helfen, den Datenkontext zu verstehen und vertrauliche Daten zu identifizieren, die sich in Ihren Azure NetApp Files -Konten befinden.
++
+https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html["Erfahren Sie mehr über die Datenklassifizierung"^]
+
+
+
+
+
+== NetApp Konsole
+
+Auf Azure NetApp Files kann über die NetApp Konsole zugegriffen werden.
+
+Die NetApp Konsole ermöglicht eine zentrale Verwaltung von NetApp -Speicher- und Datendiensten in lokalen und Cloud-Umgebungen auf Unternehmensebene. Die Konsole ist für den Zugriff auf und die Nutzung der NetApp -Datendienste erforderlich. Als Verwaltungsschnittstelle ermöglicht es Ihnen, viele Speicherressourcen über eine Schnittstelle zu verwalten. Konsolenadministratoren können den Zugriff auf Speicher und Dienste für alle Systeme innerhalb des Unternehmens steuern.
+
+Sie benötigen weder eine Lizenz noch ein Abonnement, um die NetApp -Konsole zu verwenden. Es fallen nur dann Kosten an, wenn Sie Konsolenagenten in Ihrer Cloud bereitstellen müssen, um die Konnektivität zu Ihren Speichersystemen oder NetApp -Datendiensten sicherzustellen. Einige NetApp -Datendienste, auf die über die Konsole zugegriffen werden kann, sind jedoch lizenz- oder abonnementbasiert.
+
+Erfahren Sie mehr über dielink:https://docs.netapp.com/us-en/bluexp-setup-admin/concept-overview.html["NetApp Konsole"^] .
+
+
+
+== Kosten
+
+https://azure.microsoft.com/pricing/details/netapp/["Preise für Azure NetApp Files anzeigen"^]
+
+Abonnement und Abrechnung werden vom Azure NetApp Files Dienst verwaltet, nicht von der Konsole.
+
+
+
+== Unterstützte Regionen
+
+https://bluexp.netapp.com/cloud-volumes-global-regions["Anzeigen der unterstützten Azure-Regionen"^]
+
+
+
+== Hilfe bekommen
+
+Verwenden Sie bei technischen Supportproblemen im Zusammenhang mit Azure NetApp Files das Azure-Portal, um eine Supportanfrage an Microsoft zu senden.  Wählen Sie Ihr zugehöriges Microsoft-Abonnement aus und wählen Sie unter *Speicher* den Dienstnamen * Azure NetApp Files* aus.  Geben Sie die restlichen Informationen ein, die zum Erstellen Ihrer Microsoft-Supportanfrage erforderlich sind.
+
+
+
+== Weiterführende Links
+
+* link:https://bluexp.netapp.com/azure-netapp-files["NetApp -Konsolenwebsite: Azure NetApp Files"^]
+* link:https://learn.microsoft.com/azure/azure-netapp-files/["Azure NetApp Files Dokumentation"^]
+* link:https://docs.netapp.com/us-en/bluexp-copy-sync/index.html["Dokumentation zum Kopieren und Synchronisieren"^]
+

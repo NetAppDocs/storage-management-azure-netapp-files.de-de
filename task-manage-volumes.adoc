@@ -1,0 +1,76 @@
+---
+sidebar: sidebar 
+permalink: task-manage-volumes.html 
+keywords: azure netapp files, delete volumes, delete nfs volumes, netapp account, capacity pool, change service level 
+summary: Nachdem Sie Ihr System eingerichtet haben, können Sie Azure NetApp Files Konten, Kapazitätspools, Volumes und Snapshots verwalten. 
+---
+= Vorhandene Volumes verwalten
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Sie können vorhandene Volumes verwalten, wenn sich Ihr Speicherbedarf ändert.  Sie können Volumes bearbeiten, den Servicelevel eines Volumes ändern, Snapshot-Kopien verwalten und Volumes löschen.
+
+
+
+== Bearbeiten der Größe und Tags eines Volumes
+
+Nachdem Sie ein Volume erstellt haben, können Sie dessen Größe und Tags jederzeit ändern.
+
+.Schritte
+. Öffnen Sie das System.
+. Bewegen Sie den Mauszeiger über das Volume und wählen Sie *Bearbeiten*.
+. Ändern Sie die Größe und Tags nach Bedarf.
+. Wählen Sie *Übernehmen*.
+
+
+
+
+== Ändern Sie den Servicelevel des Volumes
+
+Nachdem Sie ein Volume erstellt haben, können Sie den Servicelevel jederzeit ändern, solange der Zielkapazitätspool bereits vorhanden ist.
+
+.Schritte
+. Öffnen Sie das System.
+. Bewegen Sie den Mauszeiger über das Volume und wählen Sie *Servicelevel ändern*.
+. Wählen Sie den Kapazitätspool aus, der das gewünschte Servicelevel bietet.
+. Wählen Sie *Ändern*.
+
+
+.Ergebnis
+Das Volume wird ohne Auswirkungen auf das Volume in den anderen Kapazitätspool verschoben.
+
+
+
+== Verwalten von Snapshot-Kopien
+
+Snapshot-Kopien stellen eine zeitpunktbezogene Kopie Ihres Volumes bereit.  Erstellen Sie Snapshot-Kopien, stellen Sie die Daten auf einem neuen Volume wieder her und löschen Sie Snapshot-Kopien.
+
+.Schritte
+. Öffnen Sie das System.
+. Bewegen Sie den Mauszeiger über das Volume und wählen Sie eine der verfügbaren Optionen zum Verwalten von Snapshot-Kopien:
++
+** *Erstellen Sie eine Snapshot-Kopie*
+** *Lautstärke auf Snapshot zurücksetzen*
+** *Eine Snapshot-Kopie löschen*
+
+
+. Folgen Sie den Anweisungen, um die ausgewählte Aktion abzuschließen.
+
+
+
+
+== Volumes löschen
+
+Löschen Sie die Volumes, die Sie nicht mehr benötigen.
+
+.Schritte
+. Öffnen Sie das System.
+. Bewegen Sie den Mauszeiger über das Volume und wählen Sie dann *Löschen*.
+. Bestätigen Sie, dass Sie das Volume löschen möchten.
+

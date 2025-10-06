@@ -1,0 +1,87 @@
+---
+sidebar: sidebar 
+permalink: task-create-volumes.html 
+keywords: azure netapp files, create volumes, create nfs volumes, netapp account, capacity pool, create capacity pool, mount path, get mount path, find mount path, mount volume 
+summary: Nachdem Sie Ihr System eingerichtet haben, können Sie Azure NetApp Files -Konten, Kapazitätspools und Volumes erstellen. 
+---
+= Erstellen und Mounten von Volumes
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Nachdem Sie Ihr System eingerichtet haben, können Sie Azure NetApp Files -Konten, Kapazitätspools und Volumes erstellen.
+
+
+
+== Erstellen von Volumes
+
+Sie können NFS- oder SMB-Volumes in einem neuen oder vorhandenen Azure NetApp Files Konto erstellen.
+
+.Bevor Sie beginnen
+* Wenn Sie SMB verwenden möchten, müssen Sie DNS und Active Directory eingerichtet haben.
+* Wenn Sie planen, ein SMB-Volume zu erstellen, müssen Sie über einen Windows Active Directory-Server verfügen, zu dem Sie eine Verbindung herstellen können.  Sie geben diese Informationen beim Erstellen des Volumes ein.
+
+
+.Schritte
+. Öffnen Sie das Azure NetApp Files System.
+. Wählen Sie *Neues Volume hinzufügen*.
+. Geben Sie auf jeder Seite die erforderlichen Informationen an:
++
+** * Azure NetApp Files Konto*: Wählen Sie ein vorhandenes Azure NetApp Files Konto aus oder erstellen Sie ein neues Konto.  Beim Erstellen eines neuen Kontos müssen Sie auch die Ressourcengruppe auswählen.  Sie können eine vorhandene Ressourcengruppe verwenden oder eine neue erstellen.
++
+image:screenshot_anf_create_account.png["Ein Screenshot der Felder, die zum Erstellen eines Azure NetApp Files Kontos erforderlich sind, einschließlich Name, Azure-Abonnement, Standort und Ressourcengruppe."]
+
+** *Kapazitätspool*: Wählen Sie einen vorhandenen Kapazitätspool aus oder erstellen Sie einen neuen Kapazitätspool.
++
+Wenn Sie einen neuen Kapazitätspool erstellen, geben Sie die Größe und https://learn.microsoft.com/en-us/azure/azure-netapp-files/azure-netapp-files-service-levels["Servicelevel"^] .
+
++
+Die Mindestgröße für einen Kapazitätspool beträgt 1 TB.
+
++
+image:screenshot-create-capacity-pool.png["Screenshot des Menüs zum Erstellen eines Kapazitätspools."]
+
+** *Details und Tags*: Geben Sie den Namen und die Größe des Volumes sowie das VNet und das Subnetz ein, in dem sich das Volume befinden soll, und geben Sie optional Tags für das Volume an.  Wählen Sie *Standard* oder *Basis*-Netzwerk.  *Standard* unterstützt virtuelle Netzwerkfunktionen (VNet), während *Basic* reduzierte IP-Grenzwerte und keine zusätzlichen VNet-Funktionen für das Volume aufweist. Weitere Informationen finden Sie unter link:https://learn.microsoft.com/azure/azure-netapp-files/configure-network-features["Konfigurieren von Netzwerkfunktionen"^] .
++
+image:screenshot-create-volume.gif["Screenshot der Optionen zum Erstellen eines Volumes."]
+
+** *Protokoll*: Wählen Sie das NFS- oder SMB-Protokoll und geben Sie die erforderlichen Informationen ein.
++
+Wenn Sie NFS wählen, müssen Sie den *Volume-Pfad* eingeben, die *NFS-Version* auswählen und die *Exportrichtlinie* festlegen.
+
++
+image:screenshot-protocol-nfs.png["Ein Screenshot der Felder, die zum Einrichten eines NFS-Volumes erforderlich sind."]
+
++
+Wenn Sie SMB wählen, müssen Sie den **Volume-Pfad** eingeben und dann die SMB-Konnektivität mit der **primären DNS-IP-Adresse** und den Active Directory-Konfigurationsdetails konfigurieren.
+
++
+image:screenshot-protocol-smb.png["Ein Screenshot der Felder, die zum Einrichten eines SMB-Volumes erforderlich sind."]
+
+
+
+. Wenn dieses Volume basierend auf einem Snapshot eines vorhandenen Volumes erstellt werden soll, wählen Sie den Snapshot aus der Dropdown-Liste „Snapshot-Name“ aus.
+. Wählen Sie *Volume hinzufügen*.
+. Nachdem Sie das Volume erstellt haben, sollten Sie fortfahren mit<<Volumes einbinden,Mounten Sie das Cloud-Volume>> .
+
+
+
+
+== Volumes einbinden
+
+Greifen Sie über die NetApp -Konsole auf die Bereitstellungsanweisungen zu, damit Sie das Volume auf einem Host bereitstellen können.
+
+.Schritte
+. Öffnen Sie in der NetApp -Konsole das Azure NetApp Files System.
+. Bewegen Sie den Cursor über die Lautstärke und wählen Sie dann die drei Punkte aus `...` neben dem Lautstärkestatus.
+. Wählen Sie **Volume mounten**.
++
+image:screenshot-volume-options.png["Ein Screenshot der verfügbaren Vorgänge, wenn Sie den Cursor über ein Volume bewegen."]
+
+. Befolgen Sie die Anweisungen zum Mounten des Volumes.
+

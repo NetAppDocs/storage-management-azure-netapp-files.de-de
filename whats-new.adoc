@@ -1,0 +1,121 @@
+---
+sidebar: sidebar 
+permalink: whats-new.html 
+keywords: 'what"s new, features, new, release notes, bugs, limitations, known issues, enhancements, fixes, netapp console' 
+summary: Informieren Sie sich über die Neuerungen beim Azure NetApp Files -Support in der NetApp Konsole. 
+---
+= Was ist neu
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Informieren Sie sich über die Neuerungen bei Azure NetApp Files in der NetApp Konsole.
+
+
+
+== 06. Oktober 2025
+
+
+
+=== BlueXP heißt jetzt NetApp Console
+
+BlueXP wurde umbenannt und neu gestaltet, um seine Rolle bei der Verwaltung Ihrer Dateninfrastruktur besser widerzuspiegeln.
+
+Die NetApp Console ermöglicht eine zentrale Verwaltung von Speicher- und Datendiensten in lokalen und Cloud-Umgebungen auf Unternehmensebene und liefert Einblicke in Echtzeit, schnellere Workflows und eine vereinfachte Verwaltung.
+
+Einzelheiten zu den Änderungen finden Sie im https://docs.netapp.com/us-en/bluexp-relnotes/index.html["Versionshinweise zur NetApp Konsole"] .
+
+
+
+== 13. Januar 2025
+
+
+
+=== Netzwerkfunktionen werden jetzt in BlueXP unterstützt
+
+Beim Konfigurieren eines Volumes in Azure NetApp Files von BlueXP können Sie jetzt Netzwerkfunktionen angeben.  Dies entspricht der Funktionalität, die in nativen Azure NetApp Files verfügbar ist.
+
+
+
+== 12. Juni 2024
+
+
+
+=== Neue Berechtigung erforderlich
+
+Zum Verwalten von Azure NetApp Files Volumes von BlueXP aus ist jetzt die folgende Berechtigung erforderlich:
+
+Microsoft.Network/virtualNetworks/subnets/read
+
+Diese Berechtigung ist zum Lesen eines virtuellen Netzwerksubnetzes erforderlich.
+
+Wenn Sie derzeit Azure NetApp Files von BlueXP aus verwalten, müssen Sie diese Berechtigung der benutzerdefinierten Rolle hinzufügen, die mit der zuvor erstellten Microsoft Entra-Anwendung verknüpft ist.
+
+https://docs.netapp.com/us-en/bluexp-azure-netapp-files/task-set-up-azure-ad.html["Erfahren Sie, wie Sie eine Microsoft Entra-Anwendung einrichten und die benutzerdefinierten Rollenberechtigungen anzeigen"] .
+
+
+
+== 22. April 2024
+
+
+
+=== Volume-Vorlagen werden nicht mehr unterstützt
+
+Sie können kein Volume mehr aus einer Vorlage erstellen. Diese Aktion war mit dem BlueXP -Korrekturdienst verknüpft, der nicht mehr verfügbar ist.
+
+
+
+== 11. April 2021
+
+
+
+=== Unterstützung für Volume-Vorlagen
+
+Mit einem neuen Anwendungsvorlagendienst können Sie eine Volumevorlage für Azure NetApp Files einrichten.  Die Vorlage sollte Ihnen die Arbeit erleichtern, da bestimmte Volume-Parameter bereits in der Vorlage definiert sind, z. B. Kapazitätspool, Größe, Protokoll, VNet und Subnetz, in dem sich das Volume befinden soll, und mehr.  Wenn ein Parameter bereits vordefiniert ist, können Sie einfach zum nächsten Lautstärkeparameter springen.
+
+
+
+== 8. März 2021
+
+
+
+=== Service-Level dynamisch ändern
+
+Sie können jetzt das Servicelevel für ein Volume dynamisch ändern, um den Workload-Anforderungen gerecht zu werden und Ihre Kosten zu optimieren.  Das Volume wird ohne Auswirkungen auf das Volume in den anderen Kapazitätspool verschoben.
+
+https://docs.netapp.com/us-en/bluexp-azure-netapp-files/task-manage-volumes.html#change-the-volumes-service-level["Erfahren Sie, wie Sie das Servicelevel eines Volumes ändern"] .
+
+
+
+== 3. August 2020
+
+
+
+=== Einrichtung und Verwaltung von Azure NetApp Files
+
+Richten Sie Azure NetApp Files direkt über Cloud Manager ein und verwalten Sie sie.  Nachdem Sie ein Azure NetApp Files System erstellt haben, können Sie die folgenden Aufgaben ausführen:
+
+* Erstellen Sie NFS- und SMB-Volumes.
+* Verwalten von Kapazitätspools und Volume-Snapshots
++
+Mit Cloud Manager können Sie Volume-Snapshots erstellen, löschen und wiederherstellen.  Sie können auch neue Kapazitätspools erstellen und deren Servicelevel angeben.
+
+* Bearbeiten Sie ein Volume, indem Sie seine Größe ändern und Tags verwalten.
+
+
+Die Möglichkeit, Azure NetApp Files direkt aus Cloud Manager zu erstellen und zu verwalten, ersetzt die vorherige Datenmigrationsfunktion.
+
+
+
+== 5. April 2020
+
+
+
+=== Datenmigration zu Azure NetApp Files
+
+Sie können jetzt NFS- oder SMB-Daten direkt von Cloud Manager zu Azure NetApp Files migrieren.  Die Datensynchronisierung erfolgt über BlueXP copy and sync.

@@ -1,0 +1,27 @@
+---
+sidebar: sidebar 
+permalink: task-remove-system.html 
+keywords: remove azure netapp files, remove anf, remove working environment, system, netapp console 
+summary: Erfahren Sie, wie Sie Azure NetApp Files aus der NetApp -Konsole entfernen.  Ihr Azure NetApp Files Konto oder Ihre Volumes werden dadurch nicht gelöscht.  Sie können Azure NetApp Files jederzeit wieder zur Konsole hinzufügen. 
+---
+= Entfernen von Azure NetApp Files aus der NetApp Konsole
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Sie können ein Azure NetApp Files -System aus der NetApp Konsole entfernen.  Durch das Entfernen des Azure NetApp Files Systems werden Ihr Azure NetApp Files Konto, Ihre Kapazitätspools oder Volumes nicht gelöscht.  Sie können Azure NetApp Files jederzeit wieder zur Konsole hinzufügen.
+
+.Schritte
+. Öffnen Sie das Azure NetApp Files System.
+. Wählen Sie oben rechts auf der Seite die drei Punkte aus `...` dann * Azure NetApp Files entfernen*.
+
+
+image:screenshot-remove-system.png["Ein Screenshot, der die Option zum Entfernen eines Azure NetApp Files Systems zeigt."]
+
+. Wählen Sie im Popup-Dialogfeld *Entfernen* aus, um zu bestätigen, dass Sie das System entfernen möchten.
+

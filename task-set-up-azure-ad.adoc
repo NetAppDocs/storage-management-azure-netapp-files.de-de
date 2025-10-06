@@ -1,0 +1,163 @@
+---
+sidebar: sidebar 
+permalink: task-set-up-azure-ad.html 
+keywords: azure netapp files, azure netapp files permissions, azure permissions, active directory, application, ad application, ad app, app, service principal 
+summary: Die NetApp Konsole benötigt Berechtigungen zum Einrichten und Verwalten von Azure NetApp Files.  Sie können einem Azure-Konto die erforderlichen Berechtigungen erteilen, indem Sie eine Microsoft Entra-Anwendung erstellen und einrichten und die Azure-Anmeldeinformationen abrufen, die die Konsole benötigt. 
+---
+= Einrichten einer Microsoft Entra-Anwendung
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Die NetApp Konsole benötigt Berechtigungen zum Einrichten und Verwalten von Azure NetApp Files.  Sie können einem Azure-Konto die erforderlichen Berechtigungen erteilen, indem Sie eine Microsoft Entra-Anwendung erstellen und einrichten und die Azure-Anmeldeinformationen abrufen, die die Konsole benötigt.
+
+
+
+== Schritt 1: Erstellen der Anwendung
+
+Erstellen Sie eine Microsoft Entra-Anwendung und einen Dienstprinzipal, den die Konsole für die rollenbasierte Zugriffskontrolle verwenden kann.
+
+.Bevor Sie beginnen
+Sie müssen in Azure über die richtigen Berechtigungen verfügen, um eine Active Directory-Anwendung zu erstellen und die Anwendung einer Rolle zuzuweisen. Weitere Einzelheiten finden Sie unter https://learn.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal#required-permissions/["Microsoft Azure-Dokumentation: Erforderliche Berechtigungen"^] .
+
+.Schritte
+. Öffnen Sie im Azure-Portal den Dienst *Microsoft Entra ID*.
++
+image:screenshot_azure_ad.png["Ein Screenshot, der den Active Directory-Dienst in Microsoft Azure zeigt."]
+
+. Wählen Sie im Menü *App-Registrierungen* aus.
+. Erstellen Sie die Anwendung:
++
+.. Wählen Sie *Neuregistrierung*.
+.. Geben Sie Details zur Anwendung an:
++
+*** *Name*: Geben Sie einen Namen für die Anwendung ein.
+*** *Kontotyp*: Wählen Sie einen Kontotyp aus (alle funktionieren mit der Konsole).
+*** *Umleitungs-URI*: Sie können dieses Feld leer lassen.
+
+
+.. Wählen Sie *Registrieren*.
+
+
+. Kopieren Sie die *Anwendungs-ID (Client-ID)* und die *Verzeichnis-ID (Mandant-ID)*.
++
+image:screenshot_anf_app_ids.gif["Ein Screenshot, der die Anwendungs-ID (Client) und die Verzeichnis-ID (Mandant) für eine Anwendung in der Microsoft Entra ID zeigt."]
+
++
+Wenn Sie das Azure NetApp Files -System in der Konsole erstellen, müssen Sie die Anwendungs-ID (Client) und die Verzeichnis-ID (Mandant) für die Anwendung angeben. Die Konsole verwendet die IDs zur programmgesteuerten Anmeldung.
+
+. Erstellen Sie ein Client-Geheimnis für die Anwendung, damit die Konsole es zur Authentifizierung mit der Microsoft Entra-ID verwenden kann:
++
+.. Wählen Sie *Zertifikate und Geheimnisse > Neues Clientgeheimnis*.
+.. Geben Sie eine Beschreibung des Geheimnisses und eine Dauer an.
+.. Wählen Sie *Hinzufügen*.
+.. Kopieren Sie den Wert des Client-Geheimnisses.
++
+image:screenshot_anf_client_secret.gif["Ein Screenshot des Azure-Portals, der ein Clientgeheimnis für den Microsoft Entra-Dienstprinzipal zeigt."]
+
+
+
+
+
+.Ergebnis
+Ihre AD-Anwendung ist jetzt eingerichtet und Sie sollten die Anwendungs-ID (Client-ID), die Verzeichnis-ID (Mandanten-ID) und den Wert des Client-Geheimnisses kopiert haben.  Sie müssen diese Informationen in der Konsole eingeben, wenn Sie ein Azure NetApp Files -System hinzufügen.
+
+
+
+== Schritt 2: Weisen Sie der App eine Rolle zu
+
+Sie müssen den Dienstprinzipal an Ihr Azure-Abonnement binden und ihm eine benutzerdefinierte Rolle mit den erforderlichen Berechtigungen zuweisen.
+
+.Schritte
+. https://learn.microsoft.com/en-us/azure/role-based-access-control/custom-roles["Erstellen einer benutzerdefinierten Rolle in Azure"^] .
++
+Die folgenden Schritte beschreiben, wie Sie die Rolle über das Azure-Portal erstellen.
+
++
+.. Öffnen Sie das Abonnement und wählen Sie *Zugriffskontrolle (IAM)*.
+.. Wählen Sie *Hinzufügen > Benutzerdefinierte Rolle hinzufügen*.
++
+image:screenshot_azure_access_control.gif["Ein Screenshot, der die Schritte zum Hinzufügen einer benutzerdefinierten Rolle im Azure-Portal zeigt."]
+
+.. Geben Sie auf der Registerkarte *Grundlagen* einen Namen und eine Beschreibung für die Rolle ein.
+.. Wählen Sie *JSON* und dann *Bearbeiten*, das oben rechts im JSON-Format angezeigt wird.
+.. Fügen Sie unter _Aktionen_ die folgenden Berechtigungen hinzu:
++
+[source, json]
+----
+"actions": [
+    "Microsoft.NetApp/*",
+    "Microsoft.Resources/resources/read",
+    "Microsoft.Resources/subscriptions/resourceGroups/read",
+    "Microsoft.Resources/subscriptions/resourcegroups/resources/read",
+    "Microsoft.Resources/subscriptions/resourceGroups/write",
+    "Microsoft.Network/virtualNetworks/read",
+    "Microsoft.Network/virtualNetworks/subnets/read",
+    "Microsoft.Insights/Metrics/Read"
+    ],
+----
+.. Wählen Sie *Speichern* > *Weiter* und dann *Erstellen*.
+
+
+. Weisen Sie der Anwendung die Rolle zu, die Sie gerade erstellt haben:
++
+.. Öffnen Sie im Azure-Portal *Abonnements*.
+.. Wählen Sie das Abonnement aus.
+.. Wählen Sie *Zugriffskontrolle (IAM) > Hinzufügen > Rollenzuweisung hinzufügen*.
+.. Wählen Sie auf der Registerkarte *Rolle* die benutzerdefinierte Rolle aus, die Sie erstellt haben, und klicken Sie dann auf *Weiter*.
+.. Führen Sie auf der Registerkarte *Mitglieder* die folgenden Schritte aus:
++
+*** Behalten Sie die Auswahl von *Benutzer, Gruppe oder Dienstprinzipal* bei.
+*** Wählen Sie *Mitglieder auswählen*.
++
+image:screenshot-azure-anf-role.png["Ein Screenshot des Azure-Portals, der die Registerkarte „Mitglieder“ beim Hinzufügen einer Rolle zu einer Anwendung zeigt."]
+
+*** Suchen Sie nach dem Namen der Anwendung.
++
+Hier ist ein Beispiel:
+
++
+image:screenshot_anf_app_role.png["Ein Screenshot des Azure-Portals, der das Formular „Rollenzuweisung hinzufügen“ im Azure-Portal zeigt."]
+
+*** Wählen Sie die Anwendung aus und klicken Sie dann auf *Auswählen*.
+*** Wählen Sie *Weiter*.
+
+
+.. Wählen Sie *Überprüfen + zuweisen*.
++
+Der Dienstprinzipal für die Konsole verfügt jetzt über die erforderlichen Azure-Berechtigungen für dieses Abonnement.
+
+
+
+
+
+
+
+== Schritt 3: Fügen Sie die Anmeldeinformationen zur Konsole hinzu
+
+Wenn Sie das Azure NetApp Files -System erstellen, werden Sie aufgefordert, die mit dem Dienstprinzipal verknüpften Anmeldeinformationen auszuwählen.  Sie müssen diese Anmeldeinformationen zur Konsole hinzufügen, bevor Sie das System erstellen.
+
+.Schritte
+. Wählen Sie in der linken Navigationsleiste der Konsole **Administration** > **Anmeldeinformationen** aus.
+. Wählen Sie *Anmeldeinformationen hinzufügen* und folgen Sie den Schritten des Assistenten.
++
+.. *Speicherort der Anmeldeinformationen*: Wählen Sie *Microsoft Azure > NetApp Konsole*.
+.. *Anmeldeinformationen definieren*: Geben Sie Informationen zum Microsoft Entra-Dienstprinzipal ein, der die erforderlichen Berechtigungen erteilt:
++
+*** Client-Geheimnis
+*** Anwendungs-ID (Client-ID)
+*** Verzeichnis-ID (Mandant)
++
+Sie sollten diese Informationen erfasst haben, als Sie<<create-AD-application,die AD-Anwendung erstellt>> .
+
+
+
+.. *Überprüfen*: Bestätigen Sie die Details zu den neuen Anmeldeinformationen und wählen Sie dann *Hinzufügen*.
+
+
+

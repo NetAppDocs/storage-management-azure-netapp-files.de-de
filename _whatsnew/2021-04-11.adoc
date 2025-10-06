@@ -1,0 +1,13 @@
+= Unterstützung für Volume-Vorlagen
+:allow-uri-read: 
+
+
+
+
+=== Unterstützung für Volume-Vorlagen
+
+Mit einem neuen Anwendungsvorlagendienst können Sie eine Volumevorlage für Azure NetApp Files einrichten.  Die Vorlage sollte Ihnen die Arbeit erleichtern, da bestimmte Volume-Parameter bereits in der Vorlage definiert sind, z. B. Kapazitätspool, Größe, Protokoll, VNet und Subnetz, in dem sich das Volume befinden soll, und mehr.  Wenn ein Parameter bereits vordefiniert ist, können Sie einfach zum nächsten Lautstärkeparameter springen.
+
+* https://docs.netapp.com/us-en/bluexp-remediation/concept-resource-templates.html["Erfahren Sie mehr über Anwendungsvorlagen und wie Sie diese in Ihrer Umgebung verwenden können"^]
+* https://docs.netapp.com/us-en/bluexp-azure-netapp-files/task-create-volumes.html["Erfahren Sie, wie Sie ein Azure NetApp Files Volume aus einer Vorlage erstellen"]
+
