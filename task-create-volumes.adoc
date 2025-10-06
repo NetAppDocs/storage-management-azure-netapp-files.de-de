@@ -74,10 +74,10 @@ image:screenshot-protocol-smb.png["Ein Screenshot der Felder, die zum Einrichten
 
 == Volumes einbinden
 
-Greifen Sie über die NetApp -Konsole auf die Bereitstellungsanweisungen zu, damit Sie das Volume auf einem Host bereitstellen können.
+Greifen Sie über die NetApp Console auf die Bereitstellungsanweisungen zu, damit Sie das Volume auf einem Host bereitstellen können.
 
 .Schritte
-. Öffnen Sie in der NetApp -Konsole das Azure NetApp Files System.
+. Öffnen Sie in der NetApp Console das Azure NetApp Files System.
 . Bewegen Sie den Cursor über die Lautstärke und wählen Sie dann die drei Punkte aus `...` neben dem Lautstärkestatus.
 . Wählen Sie **Volume mounten**.
 +

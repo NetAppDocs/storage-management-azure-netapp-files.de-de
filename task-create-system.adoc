@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: task-create-system.html 
 keywords: azure netapp files, create working environment, working environment, system, netapp console 
-summary: Nachdem Sie eine Microsoft Entra-Anwendung eingerichtet haben, erstellen Sie in der NetApp Konsole ein Azure NetApp Files -System, damit Sie mit der Erstellung der benötigten Volumes beginnen können. 
+summary: Nachdem Sie eine Microsoft Entra-Anwendung eingerichtet haben, erstellen Sie in der NetApp Console ein Azure NetApp Files -System, damit Sie mit der Erstellung der benötigten Volumes beginnen können. 
 ---
-= Erstellen eines Azure NetApp Files Systems in der NetApp Konsole
+= Erstellen eines Azure NetApp Files Systems in der NetApp Console
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: Nachdem Sie eine Microsoft Entra-Anwendung eingerichtet haben, erstelle
 
 
 [role="lead"]
-Nachdem Sie eine Microsoft Entra-Anwendung eingerichtet und die Anmeldeinformationen zur NetApp Konsole hinzugefügt haben, erstellen Sie ein Azure NetApp Files -System, damit Sie mit der Erstellung der benötigten Volumes beginnen können.
+Nachdem Sie eine Microsoft Entra-Anwendung eingerichtet und die Anmeldeinformationen zur NetApp Console hinzugefügt haben, erstellen Sie ein Azure NetApp Files -System, damit Sie mit der Erstellung der benötigten Volumes beginnen können.
 
 .Schritte
 . Wählen Sie auf der Seite „Systeme“ die Option „System hinzufügen“ aus.

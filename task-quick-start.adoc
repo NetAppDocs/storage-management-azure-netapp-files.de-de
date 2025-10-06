@@ -22,4 +22,4 @@ Erteilen Sie von Azure aus Berechtigungen für eine Microsoft Entra-Anwendung un
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Zwei"] link:task-create-system.html["Erstellen eines Azure NetApp Files Systems"]
 [role="quick-margin-para"]
-Wählen Sie auf der Seite „Systeme“ in der NetApp Konsole „System hinzufügen“ > „Microsoft Azure“ > „Azure NetApp Files“ aus und geben Sie dann Details zur Active Directory-Anwendung ein.
+Wählen Sie auf der Seite „Systeme“ in der NetApp Console*System hinzufügen* > *Microsoft Azure* > * Azure NetApp Files* aus und geben Sie dann Details zur Active Directory-Anwendung ein.

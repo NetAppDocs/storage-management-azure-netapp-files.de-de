@@ -27,13 +27,13 @@ Azure NetApp Files ermöglicht es Unternehmen, ihre leistungsintensiven und late
 
 
 
-=== Zusätzliche Funktionen in der NetApp Konsole
+=== Zusätzliche Funktionen in der NetApp Console
 
-* Migrieren Sie NFS- oder SMB-Daten direkt von der NetApp -Konsole zu Azure NetApp Files .  Datenmigrationen werden durch NetApp Copy and Sync unterstützt.
+* Migrieren Sie NFS- oder SMB-Daten direkt von der NetApp Console zu Azure NetApp Files .  Datenmigrationen werden durch NetApp Copy and Sync unterstützt.
 +
 https://docs.netapp.com/us-en/bluexp-copy-sync/concept-cloud-sync.html["Erfahren Sie mehr über Kopieren und Synchronisieren"^]
 
-* Mithilfe künstlicher Intelligenz (KI) kann Ihnen die NetApp Datenklassifizierung dabei helfen, den Datenkontext zu verstehen und vertrauliche Daten zu identifizieren, die sich in Ihren Azure NetApp Files -Konten befinden.
+* Mithilfe künstlicher Intelligenz (KI) kann Ihnen die NetApp Data Classification dabei helfen, den Datenkontext zu verstehen und vertrauliche Daten zu identifizieren, die sich in Ihren Azure NetApp Files -Konten befinden.
 +
 https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html["Erfahren Sie mehr über die Datenklassifizierung"^]
 
@@ -41,15 +41,15 @@ https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.htm
 
 
 
-== NetApp Konsole
+== NetApp Console
 
-Auf Azure NetApp Files kann über die NetApp Konsole zugegriffen werden.
+Auf Azure NetApp Files kann über die NetApp Console zugegriffen werden.
 
-Die NetApp Konsole ermöglicht eine zentrale Verwaltung von NetApp -Speicher- und Datendiensten in lokalen und Cloud-Umgebungen auf Unternehmensebene. Die Konsole ist für den Zugriff auf und die Nutzung der NetApp -Datendienste erforderlich. Als Verwaltungsschnittstelle ermöglicht es Ihnen, viele Speicherressourcen über eine Schnittstelle zu verwalten. Konsolenadministratoren können den Zugriff auf Speicher und Dienste für alle Systeme innerhalb des Unternehmens steuern.
+Die NetApp Console ermöglicht eine zentrale Verwaltung von NetApp -Speicher- und Datendiensten in lokalen und Cloud-Umgebungen auf Unternehmensebene. Die Konsole ist für den Zugriff auf und die Nutzung der NetApp -Datendienste erforderlich. Als Verwaltungsschnittstelle ermöglicht es Ihnen, viele Speicherressourcen über eine Schnittstelle zu verwalten. Konsolenadministratoren können den Zugriff auf Speicher und Dienste für alle Systeme innerhalb des Unternehmens steuern.
 
-Sie benötigen weder eine Lizenz noch ein Abonnement, um die NetApp -Konsole zu verwenden. Es fallen nur dann Kosten an, wenn Sie Konsolenagenten in Ihrer Cloud bereitstellen müssen, um die Konnektivität zu Ihren Speichersystemen oder NetApp -Datendiensten sicherzustellen. Einige NetApp -Datendienste, auf die über die Konsole zugegriffen werden kann, sind jedoch lizenz- oder abonnementbasiert.
+Sie benötigen weder eine Lizenz noch ein Abonnement, um die NetApp Console zu verwenden. Es fallen nur dann Kosten an, wenn Sie Konsolenagenten in Ihrer Cloud bereitstellen müssen, um die Konnektivität zu Ihren Speichersystemen oder NetApp -Datendiensten sicherzustellen. Einige NetApp -Datendienste, auf die über die Konsole zugegriffen werden kann, sind jedoch lizenz- oder abonnementbasiert.
 
-Erfahren Sie mehr über dielink:https://docs.netapp.com/us-en/bluexp-setup-admin/concept-overview.html["NetApp Konsole"^] .
+Erfahren Sie mehr über dielink:https://docs.netapp.com/us-en/bluexp-setup-admin/concept-overview.html["NetApp Console"^] .
 
 
 
@@ -75,7 +75,7 @@ Verwenden Sie bei technischen Supportproblemen im Zusammenhang mit Azure NetApp 
 
 == Weiterführende Links
 
-* link:https://bluexp.netapp.com/azure-netapp-files["NetApp -Konsolenwebsite: Azure NetApp Files"^]
+* link:https://bluexp.netapp.com/azure-netapp-files["NetApp Console -Konsolenwebsite: Azure NetApp Files"^]
 * link:https://learn.microsoft.com/azure/azure-netapp-files/["Azure NetApp Files Dokumentation"^]
 * link:https://docs.netapp.com/us-en/bluexp-copy-sync/index.html["Dokumentation zum Kopieren und Synchronisieren"^]
 

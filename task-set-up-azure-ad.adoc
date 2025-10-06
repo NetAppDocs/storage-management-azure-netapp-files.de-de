@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task-set-up-azure-ad.html 
 keywords: azure netapp files, azure netapp files permissions, azure permissions, active directory, application, ad application, ad app, app, service principal 
-summary: Die NetApp Konsole benötigt Berechtigungen zum Einrichten und Verwalten von Azure NetApp Files.  Sie können einem Azure-Konto die erforderlichen Berechtigungen erteilen, indem Sie eine Microsoft Entra-Anwendung erstellen und einrichten und die Azure-Anmeldeinformationen abrufen, die die Konsole benötigt. 
+summary: Die NetApp Console benötigt Berechtigungen zum Einrichten und Verwalten von Azure NetApp Files.  Sie können einem Azure-Konto die erforderlichen Berechtigungen erteilen, indem Sie eine Microsoft Entra-Anwendung erstellen und einrichten und die Azure-Anmeldeinformationen abrufen, die die Konsole benötigt. 
 ---
 = Einrichten einer Microsoft Entra-Anwendung
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: Die NetApp Konsole benötigt Berechtigungen zum Einrichten und Verwalte
 
 
 [role="lead"]
-Die NetApp Konsole benötigt Berechtigungen zum Einrichten und Verwalten von Azure NetApp Files.  Sie können einem Azure-Konto die erforderlichen Berechtigungen erteilen, indem Sie eine Microsoft Entra-Anwendung erstellen und einrichten und die Azure-Anmeldeinformationen abrufen, die die Konsole benötigt.
+Die NetApp Console benötigt Berechtigungen zum Einrichten und Verwalten von Azure NetApp Files.  Sie können einem Azure-Konto die erforderlichen Berechtigungen erteilen, indem Sie eine Microsoft Entra-Anwendung erstellen und einrichten und die Azure-Anmeldeinformationen abrufen, die die Konsole benötigt.
 
 
 
@@ -146,7 +146,7 @@ Wenn Sie das Azure NetApp Files -System erstellen, werden Sie aufgefordert, die 
 . Wählen Sie in der linken Navigationsleiste der Konsole **Administration** > **Anmeldeinformationen** aus.
 . Wählen Sie *Anmeldeinformationen hinzufügen* und folgen Sie den Schritten des Assistenten.
 +
-.. *Speicherort der Anmeldeinformationen*: Wählen Sie *Microsoft Azure > NetApp Konsole*.
+.. *Speicherort der Anmeldeinformationen*: Wählen Sie *Microsoft Azure > NetApp Console*.
 .. *Anmeldeinformationen definieren*: Geben Sie Informationen zum Microsoft Entra-Dienstprinzipal ein, der die erforderlichen Berechtigungen erteilt:
 +
 *** Client-Geheimnis
